@@ -6,6 +6,11 @@ const ProductSchema = new mongoose.Schema({
       required: [true, "Name is required"], 
       minlength: [2, "Name must be at least 2 characters"]
    },
+   img:{
+      type:String,
+      require:[true, 'Image is required'],
+      minlength:[true, 'Image path must be valid']
+   },
    qty: {
       type: Number, 
       required: [true, "Quantity is required"], 
