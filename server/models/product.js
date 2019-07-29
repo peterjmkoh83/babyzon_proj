@@ -30,3 +30,4 @@ const ProductSchema = new mongoose.Schema({
 },
 {timestamps: true});
 
+mongoose.model('Product', ProductSchema)
