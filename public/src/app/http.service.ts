@@ -16,6 +16,10 @@ export class HttpService {
   getCategory=(product_category:string)=>{
     return this._http.get(`/api/products/${product_category}`);
   };
+  //Get products by name
+  getName=(product_name:string)=>{
+    return this._http.get( `/api/products/${name}`);
+  };
   // Get one product by product id
   getOne=(product_id:string)=>{
     return this._http.get(`/api/products/${product_id}`);

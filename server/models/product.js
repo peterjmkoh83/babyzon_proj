@@ -31,7 +31,6 @@ const ProductSchema = new mongoose.Schema({
       required: [true, "Description is required"],
       minlength: [3, "Description must to be at least 3 characters"]
    }
-
 },
 {timestamps: true});
 

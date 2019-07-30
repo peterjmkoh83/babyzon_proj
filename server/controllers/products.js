@@ -20,9 +20,21 @@ module.exports = {
          if(err){
             res.json({message: "Error", data: err});
          }else{
+            console.log(data);
             res.json({message: "Success", data: data});
          }
       })
+   },
+
+   name:(req,res)=>{
+      console.log('from name: ',req.params.name);
+      Product.find({name:req.params.name},(err,data)=>{
+         if(err){
+            res.json({message:'Error',data:err});
+         }else{
+            res.json({message:'Success',data:data});
+         }
+      });
    },
    
    getOne: (req, res) => {
