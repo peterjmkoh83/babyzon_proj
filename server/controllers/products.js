@@ -13,6 +13,17 @@ module.exports = {
          }
       }).sort({type:1})
    },
+
+   category:(req,res)=>{
+      console.log('from category: ', req.params.category);
+      Product.find({category:req.params.category},(err,data)=>{
+         if(err){
+            res.json({message: "Error", data: err});
+         }else{
+            res.json({message: "Success", data: data});
+         }
+      })
+   },
    
    getOne: (req, res) => {
       Product.findById({_id: req.params.id}, (err, data) => {
