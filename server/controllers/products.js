@@ -20,6 +20,7 @@ module.exports = {
          if(err){
             res.json({message: "Error", data: err});
          }else{
+            console.log(data);
             res.json({message: "Success", data: data});
          }
       })
