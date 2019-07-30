@@ -25,6 +25,17 @@ module.exports = {
          }
       })
    },
+
+   name:(req,res)=>{
+      console.log('from name: ',req.params.name);
+      Product.find({name:req.params.name},(err,data)=>{
+         if(err){
+            res.json({message:'Error',data:err});
+         }else{
+            res.json({message:'Success',data:data});
+         }
+      });
+   },
    
    getOne: (req, res) => {
       Product.findById({_id: req.params.id}, (err, data) => {
