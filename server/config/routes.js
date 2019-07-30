@@ -7,4 +7,7 @@ module.exports = function(app) {
    app.post("/api/products/new", products.create);
    app.put("/api/products/edit/:id", products.update);
    app.delete("/api/products/:id", products.delete);
+   app.all('*',(req,res)=>{
+      res.sendFile(path.resolve('./public/dist/public/index.html'));
+    });
 }
