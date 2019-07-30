@@ -1,4 +1,5 @@
 const products = require("../controllers/products.js");
+const path = require('path');
 
 module.exports = function(app) {
    app.get("/api/products", products.getAll);
