@@ -19,27 +19,14 @@
             <h3>Pants</h3>
     </div>
     <div class="row border border-primary text-center">     
-        <div class="col border border-success">
-            <h4>Kid's Dress Shirt</h4> 
+        <div *ngFor="let pants of pants" class="col border border-success">
+            <h4>{{pants.name}}</h4> 
             <br>
-            <a href="#"><img src="https://www.childrensplace.com/wcsstore/GlobalSAS/images/tcp/products/500/2057033_FX.jpg" alt="Kid dress shirt"></a> 
+            <a href="#"><img src="{{pants.img}}" alt="Kid dress shirt"></a> 
             <br>
-            $30.90
+            ${{pants.price}}.00
         </div>
-        <div class="col border border-success">
-            <h4>Kid's Dress Shirt</h4> 
-            <br>
-            <a href="#"><img src="https://www.childrensplace.com/wcsstore/GlobalSAS/images/tcp/products/500/2057033_FX.jpg" alt="Kid dress shirt"></a> 
-            <br>
-            $30.90
-        </div>
-        <div class="col border border-success">
-            <h4>Kid's Dress Shirt</h4> 
-            <br>
-            <a href="#"><img src="https://www.childrensplace.com/wcsstore/GlobalSAS/images/tcp/products/500/2057033_FX.jpg" alt="Kid dress shirt"></a> 
-            <br>
-            $30.90
-        </div>
+
     </div>
     <div class="row border border-primary">
             <h3>Shoes</h3>

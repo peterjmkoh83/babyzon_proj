@@ -10,7 +10,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 export class ClothesComponent implements OnInit {
   shirts = [];
   pants= [];
-  
+
   constructor(private _httpService: HttpService,private _route: ActivatedRoute,
     private _router: Router) { }
 
@@ -21,7 +21,7 @@ export class ClothesComponent implements OnInit {
 
   getShirts(){
     this._httpService.getName('shirt').subscribe(data=>{
-      console.log("From shirts: ", data);
+      console.log("From shirts: ", data['data']);
       this.shirts = data['data'];
     })
   }

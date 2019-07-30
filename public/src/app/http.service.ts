@@ -18,7 +18,8 @@ export class HttpService {
   };
   //Get products by name
   getName=(product_name:string)=>{
-    return this._http.get( `/api/products/${name}`);
+    console.log('product name from http: ', product_name);
+    return this._http.get( `/api/products/name/${product_name}`);
   };
   // Get one product by product id
   getOne=(product_id:string)=>{
