@@ -10,6 +10,8 @@ import { LoginComponent } from './login/login.component';
 import { RegComponent } from './reg/reg.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ClothesComponent } from './clothes/clothes.component';
+import { StrollersComponent } from './strollers/strollers.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { FormsModule } from '@angular/forms';
     ProductComponent,
     NewComponent,
     LoginComponent,
-    RegComponent
+    RegComponent,
+    ClothesComponent,
+    StrollersComponent
   ],
   imports: [
     BrowserModule,
