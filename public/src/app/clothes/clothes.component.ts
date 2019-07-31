@@ -14,6 +14,7 @@ export class ClothesComponent implements OnInit {
 
   ngOnInit() {
     this.getClothes();
+    this.getName();
   }
 
   getClothes(){
@@ -21,5 +22,10 @@ export class ClothesComponent implements OnInit {
     this._httpService.getCategory('clothes').subscribe(data=>{
       console.log("From clothes: ",data);
     })
+  }
+  getName(){
+    this._httpService.getName('Summer Infant 3Dmini Convenience Stroller').subscribe(data=>{
+      console.log('Get product by name:')
+    });
   }
 }
