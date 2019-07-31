@@ -9,14 +9,16 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 })
 export class ClothesComponent implements OnInit {
   shirts = [];
-  pants= [];
-
+  pants = [];
+  shoes = [];
+  
   constructor(private _httpService: HttpService,private _route: ActivatedRoute,
     private _router: Router) { }
 
   ngOnInit() {
     this.getShirts();
     this.getPants();
+    this.getShoes();
   }
 
   getShirts(){
@@ -30,6 +32,13 @@ export class ClothesComponent implements OnInit {
     this._httpService.getName('pants').subscribe(data=>{
       console.log("From pants: ", data);
       this.pants = data["data"];
+    })
+  }
+
+  getShoes(){
+    this._httpService.getName('shoe').subscribe(data=>{
+      console.log("From shoes: ", data);
+      this.shoes = data["data"];
     })
   }
 }
