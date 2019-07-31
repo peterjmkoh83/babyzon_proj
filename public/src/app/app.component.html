@@ -1,7 +1,7 @@
 <div class="container">
   <nav class="navbar navbar-expand-sm navbar-light bg-light">
     <img class="logo" src="/assets/image/babyzon_logo.png">
-    <a class="navbar-brand" href="#">Babyzon</a>
+    <a class="navbar-brand" [routerLink]="['']">Babyzon</a>
          
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
@@ -29,7 +29,7 @@
           <a class="nav-link" [routerLink]="['products/clothes']">Clothings</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Strollers</a>
+          <a class="nav-link" [routerLink]="['products/strollers']">Strollers</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Accessories</a>
@@ -40,7 +40,7 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Bath</a>
         </li>
-      </ul>
+      </ul>  
     </div>
   </nav>
 </div>

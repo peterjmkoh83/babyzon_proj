@@ -8,19 +8,28 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
   styleUrls: ['./clothes.component.css']
 })
 export class ClothesComponent implements OnInit {
-  clothes = [];
+  shirts = [];
+  pants= [];
+
   constructor(private _httpService: HttpService,private _route: ActivatedRoute,
     private _router: Router) { }
 
   ngOnInit() {
-    this.getClothes();
-    this.getName();
+    this.getShirts();
+    this.getPants();
   }
 
-  getClothes(){
-    
-    this._httpService.getCategory('clothes').subscribe(data=>{
-      console.log("From clothes: ",data);
+  getShirts(){
+    this._httpService.getName('shirt').subscribe(data=>{
+      console.log("From shirts: ", data['data']);
+      this.shirts = data['data'];
+    })
+  }
+
+  getPants(){
+    this._httpService.getName('pants').subscribe(data=>{
+      console.log("From pants: ", data);
+      this.pants = data["data"];
     })
   }
   getName(){

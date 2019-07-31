@@ -1,1 +1,57 @@
-<p>clothes works!</p>
+<div class="container text-center">
+    <div class="row border border-primary">
+        <u><h2>Clothing</h2> </u>   
+    </div>
+
+    <div class="row border border-primary">
+        <h3>Shirts</h3>
+    </div>
+    <div class="row border border-primary text-center" >     
+        <div *ngFor="let shirt of shirts" class="col border border-success">
+           <h4>{{shirt.name}}</h4> 
+            <br>
+            <a href="#"><img src="{{shirt.img}}" alt="Baby Shirt"></a> 
+            <br>
+            ${{shirt.price}}.00
+        </div>
+    </div>
+    <div class="row border border-primary">
+            <h3>Pants</h3>
+    </div>
+    <div class="row border border-primary text-center">     
+        <div *ngFor="let pants of pants" class="col border border-success">
+            <h4>{{pants.name}}</h4> 
+            <br>
+            <a href="#"><img src="{{pants.img}}" alt="Kid dress shirt"></a> 
+            <br>
+            ${{pants.price}}.00
+        </div>
+
+    </div>
+    <div class="row border border-primary">
+            <h3>Shoes</h3>
+    </div>
+    <div class="row border border-primary text-center">     
+        <div class="col border border-success">
+            <h4>Kid's Dress Shirt</h4> 
+            <br>
+            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrbN1LuNPCqPaTVJ-NQD3L5OLERKolbbKYoikGED4Tnifp2dP9" alt="Kid dress shirt"></a> 
+            <br>
+            $30.90
+        </div>
+        <div class="col border border-success">
+            <h4>Kid's Dress Shirt</h4> 
+            <br>
+            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrbN1LuNPCqPaTVJ-NQD3L5OLERKolbbKYoikGED4Tnifp2dP9" alt="Kid dress shirt"></a> 
+            <br>
+            $30.90
+        </div>
+        <div class="col border border-success">
+            <h4>Kid's Dress Shirt</h4> 
+            <br>
+            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrbN1LuNPCqPaTVJ-NQD3L5OLERKolbbKYoikGED4Tnifp2dP9" alt="Kid dress shirt"></a> 
+            <br>
+            $30.90
+        </div>
+    </div>
+</div>
