@@ -1,0 +1,25 @@
+img{
+    height: 200px;
+    width: 180px;
+}
+
+div{
+    padding: 8px;
+}
+.clothes_row{
+    overflow: auto;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.clothes_col{
+    display: inline-block;
+}
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px; 
+}
