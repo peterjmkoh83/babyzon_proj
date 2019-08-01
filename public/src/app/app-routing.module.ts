@@ -23,7 +23,9 @@ const routes: Routes = [
   {path:'products/accessories',component:AccessoriesComponent},
   {path:'products/bath',component:BathComponent},
   {path:'products/seats',component:SeatsComponent},
-  {path:'login',component:LoginComponent}
+  {path:'login',component:LoginComponent},
+  
+
 ];
 
 @NgModule({

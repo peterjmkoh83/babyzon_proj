@@ -4,6 +4,7 @@ const User = mongoose.model("User");
 module.exports = {
    createUser: (req, res) => {
       console.log('new user from createUser: ', req.body);
+
       var new_user = new User(req.body);
       new_user.save((err, data) => {
          if(err) {
@@ -27,13 +28,21 @@ module.exports = {
       });
    },
    getOneUser: (req, res) => {
-      User.findById({_id: req.params.id}, (err, data) => {
+      console.log('req.body from getOneUser: ',req.body);
+      
+      User.findOne({email: req.body.email}, (err, data) => {
          if(err) {
             console.log(err);
             res.json({message: "Error", error: err});
          }
          else {
-            res.json({message: "Success", data: data});
+            if (req.body.password === data.password) {
+               res.json({message: "Success", data: data});
+            } 
+            else {
+               res.json({message: "Error", error: err})
+            }
+            
          }
        });
    },

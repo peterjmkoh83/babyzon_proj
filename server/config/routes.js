@@ -11,8 +11,8 @@ module.exports = function(app) {
    app.put("/api/products/edit/:id", products.update);
    app.delete("/api/products/:id", products.delete);
    app.get("/api/users", users.allUser);
-   app.get("/api/users/:id", users.getOneUser);
    app.post("/api/users/new", users.createUser);
+   app.get("/api/users/login", users.getOneUser);
    app.put("/api/users/edit/:id", users.updateUser);
    app.all('*',(req,res)=>{
       res.sendFile(path.resolve('./public/dist/public/index.html'));
