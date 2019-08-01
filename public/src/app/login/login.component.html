@@ -1,15 +1,10 @@
-<p>login works!</p>
 <div class="container">
-   <h1 class="title">Babyzon</h1>
-   
-   <div class="signinbox">
-      
+   <div class="signin" style="width: 30%;">
       <h3>Sign-In</h3>
       <form>
-         
          <div class="form-group">
             <label>Email address</label>
-            <input type="email" class="form-control" placeholder="Your email">
+            <input type="email" name="login_email" class="form-control" placeholder="">
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
          </div>
          <div class="form-group">
@@ -25,8 +20,15 @@
       <br>
       <div class="new">
          <p>New to Babyzon?</p>
-         <a href="/register">Create Your Babyzon Account</a> 
+         <a [routerLink]="['../registration']">Create Your Babyzon Account</a> 
+         
       </div>
    </div>
-</div>   
+   <div style="margin-top: 300px"></div>
+</div>
+
+
+   
+   
+
 

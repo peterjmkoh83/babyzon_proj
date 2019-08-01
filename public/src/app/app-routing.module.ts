@@ -14,10 +14,10 @@ const routes: Routes = [
   {path:'products',component:ProductsComponent},
   {path:'products/product/:id',component:ProductComponent},
   {path:'products/new',component:NewComponent},
-  {path:'products/registration',component:RegComponent},
+  {path:'registration',component:RegComponent},
   {path:'products/clothes',component:ClothesComponent},
-  {path: 'products/strollers',component:StrollersComponent},
-  {path:'products/login',component:LoginComponent}
+  {path:'products/strollers',component:StrollersComponent},
+  {path:'login',component:LoginComponent}
 ];
 
 @NgModule({
