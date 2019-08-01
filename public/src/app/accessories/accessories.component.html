@@ -1,0 +1,42 @@
+<div class="container text-center">
+        <div class="row border-bottom text-center">
+            <h3>Bottles</h3>
+        </div>
+        <div class="clothes_row"> 
+                
+            <div *ngFor="let bottle of bottles" class="col border border-success" class="clothes_col">
+               <h4>{{bottle.name}}</h4> 
+                <br>
+                <a [routerLink]="['/products/product/'+ bottle._id]"><img src="{{bottle.img}}" alt="Baby bottle image"></a> 
+                <br>
+                ${{bottle.price}}.00
+            </div>
+        </div>
+        <div class="row border-bottom">
+                <h3>Hats</h3>
+        </div>
+        <div class="row border border-primary text-center" class="clothes_row">     
+            <div *ngFor="let hat of hats" class="col border border-success" class="clothes_col">
+                <h4>{{hat.name}}</h4> 
+                <br>
+                <a [routerLink]="['/products/product/'+ hat._id]"><img src="{{hat.img}}" alt="Baby hat image"></a> 
+                <br>
+                ${{hat.price}}.00
+            </div>
+    
+        </div>
+    
+        <div class="row border-bottom">
+            <h3>Toys</h3>
+        </div>
+        <div class="row border border-primary text-center" class="clothes_row">     
+            <div *ngFor="let toy of toys" class="col border border-success" class="clothes_col">
+                <h4>{{toy.name}}</h4> 
+                <br>
+                <a [routerLink]="['/products/product/'+ toy._id]"><img src="{{toy.img}}" alt="Baby toy image"></a> 
+                <br>
+                ${{toy.price}}.00
+            </div>
+    
+        </div>
+    </div>

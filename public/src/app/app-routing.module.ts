@@ -7,6 +7,9 @@ import { RegComponent } from './reg/reg.component';
 import { LoginComponent } from './login/login.component';
 import { ClothesComponent} from './clothes/clothes.component';
 import { StrollersComponent } from './strollers/strollers.component';
+import { AccessoriesComponent } from './accessories/accessories.component';
+import { BathComponent } from './bath/bath.component';
+import { SeatsComponent } from './seats/seats.component';
 
 
 const routes: Routes = [
@@ -17,6 +20,9 @@ const routes: Routes = [
   {path:'registration',component:RegComponent},
   {path:'products/clothes',component:ClothesComponent},
   {path:'products/strollers',component:StrollersComponent},
+  {path:'products/accessories',component:AccessoriesComponent},
+  {path:'products/bath',component:BathComponent},
+  {path:'products/seats',component:SeatsComponent},
   {path:'login',component:LoginComponent}
 ];
 

@@ -15,7 +15,8 @@ module.exports = {
    },
 
    category:(req,res)=>{
-      console.log('from category: ', req.params.category);
+      // console.log('from category: ', req.params.category);
+
       Product.find({category:req.params.category},(err,data)=>{
          if(err){
             res.json({message: "Error", data: err});
