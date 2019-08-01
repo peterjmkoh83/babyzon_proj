@@ -36,7 +36,9 @@ export class ProductComponent implements OnInit {
   }
   getOnePro(){
     this._httpService.getOne(this.product_id).subscribe(data=>{
+      console.log("Got one product", data);
       this.product=data['data'];
     })
   }
 }
+  

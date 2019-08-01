@@ -5,10 +5,17 @@
     </div>
     <div class="clothes_row"> 
             
-        <div *ngFor="let shirt of shirts" class="col border border-success" class="clothes_col">
+        <div *ngFor="let shirt of shirts" class="col border border-success " class="clothes_col">
            <h4>{{shirt.name}}</h4> 
             <br>
-            <a [routerLink]="['/products/product/'+ shirt._id]"><img src="{{shirt.img}}" alt="Baby Shirt"></a> 
+            <div class="image_hover">
+                <img src="{{shirt.img}}" alt="Baby Shirt">
+                <div class="hover_link">
+                    <div class="middle">
+                        <a [routerLink]="['/products/product/'+ shirt._id]">View Details</a> 
+                    </div>
+                </div>
+            </div>
             <br>
             ${{shirt.price}}.00
         </div>
@@ -20,7 +27,15 @@
         <div *ngFor="let pants of pants" class="col border border-success" class="clothes_col">
             <h4>{{pants.name}}</h4> 
             <br>
-            <a [routerLink]="['/products/product/'+ pants._id]"><img src="{{pants.img}}" alt="Kid dress shirt"></a> 
+            <div class="image_hover">
+                    <img src="{{pants.img}}" alt="Kid dress shirt">
+                    <div class="hover_link">
+                        <div class="middle">
+                                <a [routerLink]="['/products/product/'+ pants._id]">View Details</a>
+                        </div>
+                    </div>
+                </div>
+             
             <br>
             ${{pants.price}}.00
         </div>
@@ -34,10 +49,19 @@
         <div *ngFor="let shoe of shoes" class="col border border-success" class="clothes_col">
             <h4>{{shoe.name}}</h4> 
             <br>
-            <a [routerLink]="['/products/product/'+ shoe._id]"><img src="{{shoe.img}}" alt="Kid dress shirt"></a> 
+            <div class="image_hover">
+                    <img src="{{shoe.img}}" alt="Kid dress shirt">
+                    <div class="hover_link">
+                        <div class="middle">
+                                <a [routerLink]="['/products/product/'+ shoe._id]">View Details</a> 
+                        </div>
+                    </div>
+                </div>
+            
             <br>
             ${{shoe.price}}.00
         </div>
 
     </div>
+    
 </div>
