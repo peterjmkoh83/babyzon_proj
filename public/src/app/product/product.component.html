@@ -1,1 +1,15 @@
-<p>product works!</p>
+<div class="container text-center">
+    <div class="row">
+        <div class="col" *ngIf="product">
+            <img src="{{product.img}}" alt="Baby Product Image" class="img-thumbnail">
+            <hr>
+            <a href="#" class="btn btn-info btn-lg">
+                    <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+            </a>
+            <a href="#" class="btn btn-info btn-lg">
+                Buy Now
+            </a>
+        </div>
+        <div class="col">Product Info</div>
+    </div>
+</div>
