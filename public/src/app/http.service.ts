@@ -1,3 +1,4 @@
+import { element } from 'protractor';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
@@ -37,4 +38,8 @@ export class HttpService {
   delete=(product_id:string)=>{
     return this._http.delete(`/api/delete/${product_id}`);
   };
+  createOneUser=(user:any)=>{
+    console.log("New user from http.service: ",user)
+    return this._http.post('/api/users/new', user)
+  }
 }
