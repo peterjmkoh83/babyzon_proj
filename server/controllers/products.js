@@ -5,7 +5,7 @@ module.exports = {
    getAll: (req, res) => {
       Product.find({}, (err, data) => {
          if(err) {
-            console.log(err);
+            // console.log(err);
             res.json({message: "Error", error: err});
          }
          else {
@@ -21,14 +21,14 @@ module.exports = {
          if(err){
             res.json({message: "Error", data: err});
          }else{
-            console.log(data);
+            // console.log(data);
             res.json({message: "Success", data: data});
          }
       })
    },
 
    name:(req,res)=>{
-      console.log('from name: ',req.params.name);
+      // console.log('from name: ',req.params.name);
       Product.find({name:req.params.name},(err,data)=>{
          if(err){
             res.json({message:'Error',data:err});
@@ -41,7 +41,7 @@ module.exports = {
    getOne: (req, res) => {
       Product.findById({_id: req.params.id}, (err, data) => {
          if(err) {
-            console.log(err);
+            // console.log(err);
             res.json({message: "Error", error: err });
          }
          else {
@@ -54,7 +54,7 @@ module.exports = {
       var new_product = new Product(req.body);
       new_product.save((err, data) => {
          if(err) {
-            console.log(err);
+            // console.log(err);
             res.json({message: "Error", error: err });
          }
          else {
@@ -64,7 +64,7 @@ module.exports = {
    },
 
    update: (req, res) => {
-      console.log(req);
+      // console.log(req);
       Product.findByIdAndUpdate({_id: req.params.id}, req.body, {runValidators: true, context: 'query'}, (err, data) => {
          if(err) {
             console.log(err);
@@ -79,7 +79,7 @@ module.exports = {
    delete: (req, res) => {
       Product.findByIdAndDelete({_id: req.params.id}, (err) => {
          if(err) {
-            console.log(err);
+            // console.log(err);
             res.json({message: "Error", error: err});
          }
          else {

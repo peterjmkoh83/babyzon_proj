@@ -42,9 +42,14 @@ export class HttpService {
     console.log("New user from http.service: ",user)
     return this._http.post('/api/users/new', user)
   }
-  findOneUser=(user:any) => {
-    console.log('Find one user from Http.service: ',user);
-    return this._http.get('/api/users/login',user);
+  // findOneUser=(login_user:any) => {
+  //   console.log('Find one user from Http.service: ',login_user);
+  //   return this._http.get('/api/users/login',login_user);
+  // }
+  LogInUser=(login_user:any)=>{
+    console.log('login user from http.service: ', login_user);
+    console.log('login user from http.service: ', login_user.login_email);
+    return this._http.post(`/api/users/login`,login_user);
   }
     
 }

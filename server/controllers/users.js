@@ -2,6 +2,17 @@ const mongoose = require("mongoose");
 const User = mongoose.model("User");
 
 module.exports = {
+   allUser: (req, res) => {
+      User.find({}, (err, data) => {
+         if(err) {
+            console.log(err);
+            res.json({message: "Error", error: err});
+         }
+         else {
+            res.json({message: "Success", data: data});
+         }
+      });
+   },
    createUser: (req, res) => {
       console.log('new user from createUser: ', req.body);
 
@@ -16,33 +27,24 @@ module.exports = {
          }
       });
    },
-   allUser: (req, res) => {
-      User.find({}, (err, data) => {
-         if(err) {
-            console.log(err);
-            res.json({message: "Error", error: err});
-         }
-         else {
-            res.json({message: "Success", data: data});
-         }
-      });
-   },
+   
    getOneUser: (req, res) => {
       console.log('req.body from getOneUser: ',req.body);
+
       
-      User.findOne({email: req.body.email}, (err, data) => {
+      User.findOne({email:req.body.login_email}, (err, data) => {
+         console.log('data data: ',data);
          if(err) {
             console.log(err);
             res.json({message: "Error", error: err});
          }
          else {
-            if (req.body.password === data.password) {
+            if (req.body.login_password === data.password) {
                res.json({message: "Success", data: data});
             } 
             else {
                res.json({message: "Error", error: err})
             }
-            
          }
        });
    },

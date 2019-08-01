@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
   loginUser() {
     console.log('this.user: ',this.user);
     
-    this._httpService.findOneUser(this.user).subscribe(data => {
+    this._httpService.LogInUser(this.user).subscribe(data => {
       console.log(data)
       this.user = data['data'];
     })
