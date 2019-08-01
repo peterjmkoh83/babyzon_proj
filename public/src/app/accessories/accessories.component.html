@@ -7,7 +7,7 @@
             <div *ngFor="let bottle of bottles" class="col border border-success" class="clothes_col">
                <h4>{{bottle.name}}</h4> 
                 <br>
-                <a href="#"><img src="{{bottle.img}}" alt="Baby bottle image"></a> 
+                <a [routerLink]="['/products/product/'+ bottle._id]"><img src="{{bottle.img}}" alt="Baby bottle image"></a> 
                 <br>
                 ${{bottle.price}}.00
             </div>
@@ -19,7 +19,7 @@
             <div *ngFor="let hat of hats" class="col border border-success" class="clothes_col">
                 <h4>{{hat.name}}</h4> 
                 <br>
-                <a href="#"><img src="{{hat.img}}" alt="Baby hat image"></a> 
+                <a [routerLink]="['/products/product/'+ hat._id]"><img src="{{hat.img}}" alt="Baby hat image"></a> 
                 <br>
                 ${{hat.price}}.00
             </div>
@@ -33,7 +33,7 @@
             <div *ngFor="let toy of toys" class="col border border-success" class="clothes_col">
                 <h4>{{toy.name}}</h4> 
                 <br>
-                <a href="#"><img src="{{toy.img}}" alt="Baby toy image"></a> 
+                <a [routerLink]="['/products/product/'+ toy._id]"><img src="{{toy.img}}" alt="Baby toy image"></a> 
                 <br>
                 ${{toy.price}}.00
             </div>

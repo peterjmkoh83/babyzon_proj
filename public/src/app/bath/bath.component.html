@@ -7,9 +7,9 @@
             <div *ngFor="let bath of baths" class="col border border-success" class="clothes_col">
                <h4>{{bath.name}}</h4> 
                 <br>
-                <a href="#"><img src="{{bath.img}}" alt="Baby bath supply image"></a> 
+                <a [routerLink]="['/products/product/'+ bath._id]"><img src="{{bath.img}}" alt="Baby bath supply image"></a> 
                 <br>
                 ${{bath.price}}.00
             </div>
         </div>
-    </div>
+    </div> 

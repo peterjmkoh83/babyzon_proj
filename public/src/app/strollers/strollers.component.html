@@ -7,7 +7,7 @@
             <div *ngFor="let full of full" class="col border border-success" class="clothes_col">
                <h4>{{full.name}}</h4> 
                 <br>
-                <a href="#"><img src="{{full.img}}" alt="Full-sized stroller image"></a> 
+                <a [routerLink]="['/products/product/'+ full._id]"><img src="{{full.img}}" alt="Full-sized stroller image"></a> 
                 <br>
                 ${{full.price}}.00
             </div>
@@ -19,7 +19,7 @@
             <div *ngFor="let travel of travel" class="col border border-success" class="clothes_col">
                 <h4>{{travel.name}}</h4> 
                 <br>
-                <a href="#"><img src="{{travel.img}}" alt="Travel-sized stroller image"></a> 
+                <a [routerLink]="['/products/product/'+ travel._id]"><img src="{{travel.img}}" alt="Travel-sized stroller image"></a> 
                 <br>
                 ${{travel.price}}.00
             </div>
@@ -33,7 +33,7 @@
             <div *ngFor="let double of double" class="col border border-success" class="clothes_col">
                 <h4>{{double.name}}</h4> 
                 <br>
-                <a href="#"><img src="{{double.img}}" alt="Double Stroller image"></a> 
+                <a [routerLink]="['/products/product/'+ double._id]"><img src="{{double.img}}" alt="Double Stroller image"></a> 
                 <br>
                 ${{double.price}}.00
             </div>

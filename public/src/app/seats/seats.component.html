@@ -7,7 +7,7 @@
             <div *ngFor="let seat of seats" class="col border border-success" class="clothes_col">
                <h4>{{seat.name}}</h4> 
                 <br>
-                <a href="#"><img src="{{seat.img}}" alt="Car seat image"></a> 
+                <a [routerLink]="['/products/product/'+ seat._id]"><img src="{{seat.img}}" alt="Car seat image"></a> 
                 <br>
                 ${{seat.price}}.00
             </div>

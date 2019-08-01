@@ -12,7 +12,7 @@ export class BathComponent implements OnInit {
   baths=[];
 
   constructor(private _httpService: HttpService,private _route: ActivatedRoute,
-    private _router: Router) { }
+    private _router: Router) {}
 
   ngOnInit() {
     this.getBaths();
