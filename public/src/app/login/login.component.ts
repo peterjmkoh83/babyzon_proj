@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  user_id: string;
   err: any;
   user = {
     login_email: "",
@@ -35,13 +34,16 @@ export class LoginComponent implements OnInit {
     console.log('this.user: ',this.user);
     
     this._httpService.LogInUser(this.user).subscribe(data => {
-      console.log(data)
-      this.user = data['data'];
-    })
-    
-    // if (this.user.login_email === ) {
+      console.log('data back from login: ',data);
 
-    // }
-    
+      if(data['message'] === 'Error'){
+        this.err = data['error'];
+        console.log(this.err)
+        
+      }else{
+        console.log('success', data)
+      }
+    })
+  
   }
 }
